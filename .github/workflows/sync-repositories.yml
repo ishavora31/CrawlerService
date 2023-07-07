@@ -41,6 +41,7 @@ jobs:
 
       - name: Sync repositories
         run: |
+          cd /home/runner/work
           cp -R ./CrawlerService/* ./CrawlerService-dummy/
           cd ./CrawlerService-dummy/
           git add .
