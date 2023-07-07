@@ -1,0 +1,19 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches:
+      - main  # Change this to your desired branch
+  schedule:
+    - cron:  '*/5 * * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync repositories
+        run: |
+          git clone --bare https://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@github.com/ishavora31/CrawlerService.git
+          cd CrawlerService.git
+          git push --mirror https://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@github.com/ishavora31/CrawlerService-dummy.git
