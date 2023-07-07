@@ -2,7 +2,7 @@
 This is a sample Spring Boot (version 2.5.0) application that can be used as a base for creating Web Crawler Service. This Service is simple application that is used for crawling of particular website and provides XML Structured Sitemap which includes all the Links of the same domain excluding the external links like Google or Twitter and all the static images.
 ## How to Run
 This application is packaged as a war which has embedded Tomcat. You can run this service using “java –jar” command. Below are the steps to run this service on the local machine.
-*	Clone this repository in local
+*	Clone this repository
 *	Make sure you are using JDK 1.8 and Maven 4.x
 *	You can start the application by below command:
 ```shell
