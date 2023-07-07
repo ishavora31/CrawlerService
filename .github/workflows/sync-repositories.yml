@@ -29,8 +29,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v2
+        with:
+          repository: https://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@github.com/ishavora31/CrawlerService.git  # Replace with the source repository owner and name
+
+      - name: Checkout target repository
+        uses: actions/checkout@v2
+        with:
+          repository: https://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@github.com/ishavora31/CrawlerService-dummy.git  # Replace with the target repository owner and name
+
       - name: Sync repositories
         run: |
-          git clone --bare https://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@github.com/ishavora31/CrawlerService.git
-          cd CrawlerService.git
-          git push --mirror https://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@github.com/ishavora31/CrawlerService-dummy.git
+          cp -R ./CrawlerService/* ./CrawlerService-dummy/
+          cd ./CrawlerService-dummy/
+          git add .
+          git commit -m "Sync changes from source repository"
+          git push
