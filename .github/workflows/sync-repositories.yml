@@ -32,12 +32,12 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v2
         with:
-          repository: https://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@github.com/ishavora31/CrawlerService.git  # Replace with the source repository owner and name
+          repository: ishavora31/CrawlerService  # Replace with the source repository owner and name
 
       - name: Checkout target repository
         uses: actions/checkout@v2
         with:
-          repository: https://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@github.com/ishavora31/CrawlerService-dummy.git  # Replace with the target repository owner and name
+          repository: ishavora31/CrawlerService-dummy  # Replace with the target repository owner and name
 
       - name: Sync repositories
         run: |
