@@ -36,11 +36,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ishavora31/CrawlerService  # Replace with the source repository owner and name
+          path: CrawlerService
 
       - name: Checkout target repository
         uses: actions/checkout@v2
         with:
           repository: ishavora31/CrawlerService-dummy  # Replace with the target repository owner and name
+          path: CrawlerService-dummy
 
       - name: Sync repositories
         run: |
