@@ -44,13 +44,16 @@ jobs:
           repository: ishavora31/CrawlerService-dummy  # Replace with the target repository owner and name
           path: CrawlerService-dummy
 
-      - name: Sync repositories
+      - name: copy repositories content
         run: |
           git config user.email "ivora2757@gmail.com"
           git config user.name "ishavora31"
           cd /home/runner/work/CrawlerService/CrawlerService/
           cp -R CrawlerService/* CrawlerService-dummy/
-          cd CrawlerService-dummy/
+          
+      - name: push into target repo
+        run: |
+          cd /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
           git add .
           git commit -m "Sync changes from source repository"
           git push
