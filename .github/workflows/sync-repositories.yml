@@ -49,7 +49,7 @@ jobs:
           cd /home/runner/work/CrawlerService/CrawlerService/
           cp -R CrawlerService/* CrawlerService-dummy/
           
-      - name: push into target repo
+      - name: push locally
         run: |
           cd /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
           git remote set-url origin https://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@github.com/ishavora31/CrawlerService-dummy.git
@@ -57,4 +57,11 @@ jobs:
           git config user.name "ishavora31"
           git add .
           git commit -m "Sync changes from source repository"
-          git push
+          
+      - name: push into target repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.SYNC_TOKEN }}
+          repository: ishavora31/CrawlerService-dummy
+          path: CrawlerService-dummy
+          branch: master
