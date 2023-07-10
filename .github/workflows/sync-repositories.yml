@@ -46,8 +46,6 @@ jobs:
 
       - name: copy repositories content
         run: |
-          git config user.email "ivora2757@gmail.com"
-          git config user.name "ishavora31"
           cd /home/runner/work/CrawlerService/CrawlerService/
           cp -R CrawlerService/* CrawlerService-dummy/
           
