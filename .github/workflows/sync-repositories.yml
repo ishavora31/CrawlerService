@@ -53,6 +53,7 @@ jobs:
       - name: push into target repo
         run: |
           cd /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
+          git remote add origin https://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@github.com/ishavora31/CrawlerService-dummy.git
           git config user.email "ivora2757@gmail.com"
           git config user.name "ishavora31"
           git add .
