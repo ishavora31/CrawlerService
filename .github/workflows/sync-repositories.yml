@@ -41,6 +41,8 @@ jobs:
 
       - name: Sync repositories
         run: |
+          git config user.email "ivora2757@gmail.com"
+          git config user.name "ishavora31"
           cd /home/runner/work
           cp -R ./CrawlerService/* ./CrawlerService-dummy/
           cd ./CrawlerService-dummy/
