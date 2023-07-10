@@ -41,7 +41,7 @@ jobs:
       - name: Checkout target repository
         uses: actions/checkout@v2
         with:
-          token: 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
+          token: ${{ secrets.SYNC_TOKEN }}
           repository: ishavora31/CrawlerService-dummy  # Replace with the target repository owner and name
           path: CrawlerService-dummy
 
