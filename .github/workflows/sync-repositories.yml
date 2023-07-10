@@ -23,7 +23,10 @@ on:
   push:
     branches:
       - main  # Change this to your desired branch
-
+defaults:
+ run:
+  working-directory: /home/runner/work
+  
 jobs:
   sync:
     runs-on: ubuntu-latest
