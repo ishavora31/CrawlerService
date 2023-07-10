@@ -61,6 +61,5 @@ jobs:
       - name: push into target repo
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.SYNC_TOKEN }}
           repository: ishavora31/CrawlerService-dummy
           branch: master
