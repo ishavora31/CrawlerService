@@ -66,6 +66,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
           repository: ishavora31/CrawlerService-dummy
           branch: master
 
