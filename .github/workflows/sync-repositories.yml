@@ -60,4 +60,7 @@ jobs:
           git config user.name "ishavora31"
           git add .
           git commit -m "Sync changes from source repository"
+          
+      - name: push remote
+        run: |
           git push
