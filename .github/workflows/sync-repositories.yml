@@ -62,8 +62,10 @@ jobs:
           git add .
           git commit -m "Sync changes from source repository"
           
-      - name: push remote
-        run: |
-          cd /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
-          git config --get remote.origin.url
-          git push
+      - name: push into target repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.SYNC_TOKEN }}
+          repository: ishavora31/CrawlerService-dummy
+          branch: master
+
