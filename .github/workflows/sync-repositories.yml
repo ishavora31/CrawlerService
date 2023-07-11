@@ -63,4 +63,5 @@ jobs:
           
       - name: push remote
         run: |
+          cd /home/runner/work/CrawlerService/CrawlerService/CrawlerService-dummy/
           git push
